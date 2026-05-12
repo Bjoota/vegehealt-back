@@ -1,0 +1,5 @@
+[
+    { "id": 1, "nome": "Alface", "preco": 4.5, "unidade": "un", "estoque": 30, "imagemUrl": "https://picsum.photos/seed/alface/400/300", "categoria": "folhas" },
+    { "id": 2, "nome": "Tomate", "preco": 8.9, "unidade": "kg", "estoque": 25, "imagemUrl": "https://picsum.photos/seed/tomate/400/300", "categoria": "legumes" },
+    { "id": 3, "nome": "Cenoura", "preco": 6.2, "unidade": "kg", "estoque": 18, "imagemUrl": "https://picsum.photos/seed/cenoura/400/300", "categoria": "raizes" }
+  ]
