@@ -29,5 +29,23 @@ app.post("/checkout", (req, res) => {
   });
 });
 
+// Rota raiz exigida no requisito 2.2
+app.get('/', (req, res) => {
+  res.json({ message: "API Vegehealt está online!" });
+});
+
+// Rota /v1 com data e hora formatadas
+app.get('/v1', (req, res) => {
+  // Pega a data e hora atual no fuso horário de Brasília
+  const dataAtual = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+  
+  res.json({
+    message: "Api v1 respondendo no container docker...",
+    chamada_em: dataAtual
+  });
+});
+
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`API rodando na porta ${PORT}`));
+
