@@ -4,7 +4,16 @@ import produtosRouter from "./routes/produtos.routes.js";
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: [
+    'https://vegehealt-front.vercel.app', 
+    'https://obscure-space-broccoli-r4r9vw5wq5x9cp9ww-3001.app.github.dev'
+  ],
+  optionsSuccessStatus: 200
+}; 
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 app.get("/health", (req, res) => res.json({ status: "ok" }));
@@ -44,6 +53,7 @@ app.get('/v1', (req, res) => {
     chamada_em: dataAtual
   });
 });
+ 
 
 
 const PORT = process.env.PORT || 3000;
